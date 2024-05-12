@@ -37,7 +37,8 @@ int main() {
 			if (menuNum != EXIT_PROGRAM) {
 				switch (menuNum) {
 				case HISTOGRAM_EQ:
-					img.printBMPInfo();
+					//img.printBMPInfo();
+					cout << img.getColors() << '\n';
 					break;
 				case CONV_FILTER:
 					writeData(fout, img);

@@ -1,6 +1,6 @@
+#include "pch.h"
 #include <iostream>
 #include <fstream>
-#include "view.h"
 #include "BMP.h"
 using namespace std;
 
