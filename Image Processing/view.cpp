@@ -1,16 +1,20 @@
 #include <iostream>
+#include <string>
+#include <cctype>
 #include "view.h"
 using namespace std;
 
 int InputView::inputMenuNumber() throw() {
-	int num;
+	string s;
 	cout << "Select menu: ";
-	cin >> num;
-	if (cin.fail()) {
-		throw "Please input numbers only.";
+	getline(cin, s);
+	
+	if (s.length() != 1 || !isdigit(s[0])) {
+		throw "Please input 1-digit number.";
 	}
 
-	if (num >= MENU_NUM_RANGE) {
+	int num = s[0] - '0';
+	if (num <= 0 || num >= MENU_NUM_RANGE) {
 		throw "Invalid menu number.";
 	}
 	return num;

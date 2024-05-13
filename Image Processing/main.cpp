@@ -51,8 +51,6 @@ int main() {
 		}
 		catch(const char* s) {
 			OutputView::printErrorMessage(s);
-			cin.clear();
-			cin.ignore(1000, '\n');
 		}
 
 		cout << '\n';
