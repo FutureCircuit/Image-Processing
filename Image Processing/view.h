@@ -4,7 +4,8 @@
 enum Menu {
 	HISTOGRAM_EQ = 1,
 	CONV_FILTER,
-	EXIT_PROGRAM
+	EXIT_PROGRAM,
+	MENU_NUM_RANGE
 };
 
 class InputView {
@@ -17,7 +18,7 @@ class OutputView {
 public:
 	static void printProgramName();
 	static void printMenu();
-	static void printInvalidInput();
+	static void printErrorMessage(const char* s);
 };
 
 #endif

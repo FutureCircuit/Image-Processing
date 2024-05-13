@@ -44,15 +44,15 @@ int main() {
 					writeData(fout, img);
 					break;
 				default:
-					OutputView::printInvalidInput();
+					break;
 				}
 			}
 			else break;
 		}
-		catch(...) {
-			cout << "Error: " << '\n';
+		catch(const char* s) {
+			OutputView::printErrorMessage(s);
 			cin.clear();
-			cin.ignore();
+			cin.ignore(1000, '\n');
 		}
 
 		cout << '\n';

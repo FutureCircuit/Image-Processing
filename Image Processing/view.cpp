@@ -9,6 +9,10 @@ int InputView::inputMenuNumber() throw() {
 	if (cin.fail()) {
 		throw "Please input numbers only.";
 	}
+
+	if (num >= MENU_NUM_RANGE) {
+		throw "Invalid menu number.";
+	}
 	return num;
 }
 
@@ -29,6 +33,6 @@ void OutputView::printMenu() {
 	cout << "3. Exit \n";
 }
 
-void OutputView::printInvalidInput() {
-	cout << "Invalid number. Try again. \n";
+void OutputView::printErrorMessage(const char* s) {
+	cout << "Error: " << s << '\n';
 }
