@@ -23,6 +23,7 @@ public:
 	static void printProgramName();
 	static void printMenu();
 	static void printErrorMessage(const char* s);
+	static void printErrorMessage(string s);
 };
 
 #endif

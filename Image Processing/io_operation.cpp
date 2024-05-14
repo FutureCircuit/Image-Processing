@@ -9,8 +9,9 @@ using namespace std;
 BMPData* importFile() throw() {
 	string fileName = InputView::inputFilenameToImport();
 	ifstream fin(fileName, ios::in | ios::binary);
-	if (fin.fail()) {
-		throw "Can't import file \"" + fileName + '\"';
+	if (!fin) {
+		string s = "Can't import file \"" + fileName + '\"';
+		throw s;
 	}
 
 	BMPData* img = new BMPData(fin);
@@ -25,8 +26,9 @@ void exportFile(BMPData* img) throw() {
 
 	string fileName = InputView::inputFilenameToExport();
 	ofstream fout(fileName, ios::out | ios::binary);
-	if (fout.fail()) {
-		throw "Can't export file \"" + fileName + '\"';
+	if (!fout) {
+		string s = "Can't export file \"" + fileName + '\"';
+		throw s;
 	}
 
 	bmpFHeader tmp1 = img->getFHeader();

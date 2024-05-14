@@ -30,7 +30,10 @@ int main() {
 			}
 			else break;
 		}
-		catch(const char* s) {
+		catch (const char* s) {
+			OutputView::printErrorMessage(s);
+		}
+		catch(string s) {
 			OutputView::printErrorMessage(s);
 		}
 

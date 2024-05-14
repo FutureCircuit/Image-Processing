@@ -47,3 +47,7 @@ void OutputView::printMenu() {
 void OutputView::printErrorMessage(const char* s) {
 	cout << "Error: " << s << '\n';
 }
+
+void OutputView::printErrorMessage(string s) {
+	cout << "Error: " << s << '\n';
+}
