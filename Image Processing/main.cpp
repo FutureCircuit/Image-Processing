@@ -36,11 +36,11 @@ int main() {
 			
 			if (menuNum != EXIT_PROGRAM) {
 				switch (menuNum) {
-				case HISTOGRAM_EQ:
+				case INPUT_FILE:
 					//img.printBMPInfo();
 					cout << img.getColors() << '\n';
 					break;
-				case CONV_FILTER:
+				case OUTPUT_FILE:
 					writeData(fout, img);
 					break;
 				default:

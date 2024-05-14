@@ -128,11 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BMP.cpp" />
+    <ClCompile Include="io_operation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="view.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BMP.h" />
+    <ClInclude Include="io_operation.h" />
     <ClInclude Include="view.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>

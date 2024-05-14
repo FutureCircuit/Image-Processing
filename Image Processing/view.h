@@ -1,9 +1,12 @@
 #ifndef __VIEW_H__
 #define __VIEW_H__
 
+#include <string>
+using namespace std;
+
 enum Menu {
-	HISTOGRAM_EQ = 1,
-	CONV_FILTER,
+	INPUT_FILE = 1,
+	OUTPUT_FILE,
 	EXIT_PROGRAM,
 	MENU_NUM_RANGE
 };
@@ -11,7 +14,8 @@ enum Menu {
 class InputView {
 public:
 	static int inputMenuNumber() throw();
-	static const char* inputFileName();
+	static string inputFilenameToImport();
+	static string inputFilenameToExport();
 };
 
 class OutputView {

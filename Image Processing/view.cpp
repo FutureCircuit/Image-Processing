@@ -20,10 +20,17 @@ int InputView::inputMenuNumber() throw() {
 	return num;
 }
 
-const char* InputView::inputFileName() {
-	char fileName[30];
-	cout << "Input file name: ";
-	cin >> fileName;
+string InputView::inputFilenameToImport() {
+	string fileName;
+	cout << "Enter the file name to import: ";
+	getline(cin, fileName);
+	return fileName;
+}
+
+string InputView::inputFilenameToExport() {
+	string fileName;
+	cout << "Enter the file name to export: ";
+	getline(cin, fileName);
 	return fileName;
 }
 
@@ -32,8 +39,8 @@ void OutputView::printProgramName() {
 }
 
 void OutputView::printMenu() {
-	cout << "1. Histogram Equalization \n";
-	cout << "2. Convolution Filter \n";
+	cout << "1. Import File \n";
+	cout << "2. Export File \n";
 	cout << "3. Exit \n";
 }
 
