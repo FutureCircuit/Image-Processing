@@ -2,30 +2,12 @@
 #include <fstream>
 #include "view.h"
 #include "BMP.h"
+#include "io_operation.h"
 using namespace std;
-
-void writeData(ofstream& fout, BMPData& data) throw() {
-	bmpFHeader tmp1 = data.getFHeader();
-	bmpIHeader tmp2 = data.getIHeader();
-	fout.write(reinterpret_cast<char*>(&tmp1), sizeof(bmpFHeader));
-	fout.write(reinterpret_cast<char*>(&tmp2), sizeof(bmpIHeader));
-	for (int i = 0; i < data.getColors(); i++) {
-		fout.write(reinterpret_cast<char*>(&(data.getRGBQuad()[i])), sizeof(RGBQUAD));
-	}
-
-	for (int i = 0; i < data.getBmpHeight(); i++) {
-		for (int j = 0; j < data.getBmpWidth(); j++) {
-			fout.write(reinterpret_cast<char*>(&(data.getImgData()[i][j])), sizeof(BYTE));
-		}
-	}
-}
 
 int main() {
 	OutputView::printProgramName();
-	ifstream fin("map.bmp", ios::in | ios::binary);
-	ofstream fout("copied.bmp", ios::out | ios::binary);
-	BMPData img(fin);
-	fin.close();
+	BMPData* img = NULL;
 	
 	while (true) {
 		OutputView::printMenu();
@@ -37,11 +19,10 @@ int main() {
 			if (menuNum != EXIT_PROGRAM) {
 				switch (menuNum) {
 				case INPUT_FILE:
-					//img.printBMPInfo();
-					cout << img.getColors() << '\n';
+					img = importFile();
 					break;
 				case OUTPUT_FILE:
-					writeData(fout, img);
+					exportFile(img);
 					break;
 				default:
 					break;
