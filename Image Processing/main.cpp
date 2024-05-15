@@ -19,13 +19,13 @@ int main() {
 			
 			if (menuNum != EXIT_PROGRAM) {
 				switch (menuNum) {
-				case INPUT_FILE:
+				case IMPORT_FILE:
 					importFile(&img);
 					break;
 				case ARITHMETIC_OPR:
 					arithmeticOperation(&img);
 					break;
-				case OUTPUT_FILE:
+				case EXPORT_FILE:
 					exportFile(img);
 					break;
 				default:
