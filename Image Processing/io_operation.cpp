@@ -6,9 +6,9 @@
 #include "BMP.h"
 using namespace std;
 
-void importFile(BMPData* img) throw() {
-	if (img != NULL) {
-		delete[] img;
+void importFile(BMPData** img) throw() {
+	if (*img != NULL) {
+		delete[] *img;
 	}
 
 	string fileName = InputView::inputFilenameToImport();
@@ -18,7 +18,7 @@ void importFile(BMPData* img) throw() {
 		throw s;
 	}
 
-	img = new BMPData(fin);
+	*img = new BMPData(fin);
 	fin.close();
 }
 

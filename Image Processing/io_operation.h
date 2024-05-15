@@ -3,7 +3,7 @@
 
 #include "BMP.h"
 
-void importFile(BMPData* img) throw();
+void importFile(BMPData** img) throw();
 void exportFile(BMPData* img) throw();
 
 #endif
