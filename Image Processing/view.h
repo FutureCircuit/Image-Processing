@@ -5,11 +5,11 @@
 using namespace std;
 
 enum Menu {
-	INPUT_FILE = 1,
+	IMPORT_FILE = 1,
 	ARITHMETIC_OPR,
-	OUTPUT_FILE,
+	EXPORT_FILE,
 	EXIT_PROGRAM,
-	MENU_NUM_RANGE
+	MENU_MAX_NUM
 };
 
 class InputView {
@@ -20,6 +20,7 @@ public:
 };
 
 class OutputView {
+	static string menuText[MENU_MAX_NUM];
 public:
 	static void printProgramName();
 	static void printMenu();
