@@ -19,7 +19,7 @@ int main() {
 			if (menuNum != EXIT_PROGRAM) {
 				switch (menuNum) {
 				case INPUT_FILE:
-					img = importFile();
+					importFile(img);
 					break;
 				case OUTPUT_FILE:
 					exportFile(img);
@@ -40,5 +40,8 @@ int main() {
 		cout << '\n';
 	}
 
+	if (img != NULL) {
+		delete[] img;
+	}
 	return 0;
 }

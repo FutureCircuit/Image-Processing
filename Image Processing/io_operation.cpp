@@ -6,7 +6,11 @@
 #include "BMP.h"
 using namespace std;
 
-BMPData* importFile() throw() {
+void importFile(BMPData* img) throw() {
+	if (img != NULL) {
+		delete[] img;
+	}
+
 	string fileName = InputView::inputFilenameToImport();
 	ifstream fin(fileName, ios::in | ios::binary);
 	if (!fin) {
@@ -14,9 +18,8 @@ BMPData* importFile() throw() {
 		throw s;
 	}
 
-	BMPData* img = new BMPData(fin);
+	img = new BMPData(fin);
 	fin.close();
-	return img;
 }
 
 void exportFile(BMPData* img) throw() {
