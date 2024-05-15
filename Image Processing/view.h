@@ -6,6 +6,7 @@ using namespace std;
 
 enum Menu {
 	INPUT_FILE = 1,
+	ARITHMETIC_OPR,
 	OUTPUT_FILE,
 	EXIT_PROGRAM,
 	MENU_NUM_RANGE

@@ -39,9 +39,10 @@ void OutputView::printProgramName() {
 }
 
 void OutputView::printMenu() {
-	cout << "1. Import File \n";
-	cout << "2. Export File \n";
-	cout << "3. Exit \n";
+	cout << INPUT_FILE << ". Import File \n";
+	cout << ARITHMETIC_OPR << ". Arithmetic Operation \n";
+	cout << OUTPUT_FILE <<". Export File \n";
+	cout << EXIT_PROGRAM << ". Exit \n";
 }
 
 void OutputView::printErrorMessage(const char* s) {
