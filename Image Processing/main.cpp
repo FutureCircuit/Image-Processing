@@ -3,6 +3,7 @@
 #include "view.h"
 #include "BMP.h"
 #include "io_operation.h"
+#include "arithmetic_operation.h"
 using namespace std;
 
 int main() {
@@ -19,7 +20,10 @@ int main() {
 			if (menuNum != EXIT_PROGRAM) {
 				switch (menuNum) {
 				case INPUT_FILE:
-					importFile(img);
+					importFile(&img);
+					break;
+				case ARITHMETIC_OPR:
+					arithmeticOperation(&img);
 					break;
 				case OUTPUT_FILE:
 					exportFile(img);
@@ -41,7 +45,7 @@ int main() {
 	}
 
 	if (img != NULL) {
-		delete[] img;
+		delete img;
 	}
 	return 0;
 }
