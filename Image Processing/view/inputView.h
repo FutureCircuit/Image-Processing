@@ -6,7 +6,7 @@ using namespace std;
 
 class InputView {
 public:
-	static int inputMenuNumber() throw();
+	static string inputMenuNumber();
 	static string inputFilenameToImport();
 	static string inputFilenameToExport();
 };

@@ -7,6 +7,18 @@
 #include "arithmetic_operation.h"
 using namespace std;
 
+int getMenuNumber(string s) throw() {
+	if (s.length() != 1 || !isdigit(s[0])) {
+		throw "Please input 1-digit number.";
+	}
+
+	int num = s[0] - '0';
+	if (num <= 0 || num >= MENU_MAX_NUM) {
+		throw "Invalid menu number.";
+	}
+	return num;
+}
+
 int main() {
 	OutputView::printProgramName();
 	BMPData* img = NULL;
@@ -16,7 +28,7 @@ int main() {
 		int menuNum;
 
 		try {
-			menuNum = InputView::inputMenuNumber();
+			menuNum = getMenuNumber(InputView::inputMenuNumber());
 			
 			if (menuNum != EXIT_PROGRAM) {
 				switch (menuNum) {

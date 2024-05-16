@@ -2,23 +2,13 @@
 #include <string>
 #include <cctype>
 #include "inputView.h"
-#include "outputView.h"
 using namespace std;
 
-int InputView::inputMenuNumber() throw() {
+string InputView::inputMenuNumber() {
 	string s;
 	cout << "Select menu: ";
 	getline(cin, s);
-
-	if (s.length() != 1 || !isdigit(s[0])) {
-		throw "Please input 1-digit number.";
-	}
-
-	int num = s[0] - '0';
-	if (num <= 0 || num >= MENU_MAX_NUM) {
-		throw "Invalid menu number.";
-	}
-	return num;
+	return s;
 }
 
 string InputView::inputFilenameToImport() {
