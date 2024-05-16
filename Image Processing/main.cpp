@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include "view.h"
+#include "view/inputView.h"
+#include "view/outputView.h"
 #include "BMP.h"
 #include "io_operation.h"
 #include "arithmetic_operation.h"

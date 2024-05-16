@@ -13,12 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="헤더 파일\view">
+      <UniqueIdentifier>{bef8cf86-678a-46dc-8773-e88085c6e7c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\view">
+      <UniqueIdentifier>{7e307643-69e1-4554-bc5b-32d0409a0111}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="view.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BMP.cpp">
@@ -30,11 +33,14 @@
     <ClCompile Include="arithmetic_operation.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="view\inputView.cpp">
+      <Filter>소스 파일\view</Filter>
+    </ClCompile>
+    <ClCompile Include="view\outputView.cpp">
+      <Filter>소스 파일\view</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="view.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="BMP.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
@@ -46,6 +52,12 @@
     </ClInclude>
     <ClInclude Include="arithmetic_operation.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="view\inputView.h">
+      <Filter>헤더 파일\view</Filter>
+    </ClInclude>
+    <ClInclude Include="view\outputView.h">
+      <Filter>헤더 파일\view</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

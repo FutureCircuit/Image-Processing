@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include "io_operation.h"
-#include "view.h"
+#include "view/inputView.h"
 #include "BMP.h"
 using namespace std;
 

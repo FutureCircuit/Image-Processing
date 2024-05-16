@@ -131,14 +131,16 @@
     <ClCompile Include="BMP.cpp" />
     <ClCompile Include="io_operation.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="view.cpp" />
+    <ClCompile Include="view\inputView.cpp" />
+    <ClCompile Include="view\outputView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BMP.h" />
     <ClInclude Include="io_operation.h" />
-    <ClInclude Include="view.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="arithmetic_operation.h" />
+    <ClInclude Include="view\inputView.h" />
+    <ClInclude Include="view\outputView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
