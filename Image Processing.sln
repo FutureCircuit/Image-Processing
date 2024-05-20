@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Image Processing", "Image P
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BMPTest", "BMPTest\BMPTest.vcxproj", "{81C036A9-89FD-4E2E-BF37-A553D008D9F1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample-Test1", "Sample-Test1\Sample-Test1.vcxproj", "{697C245C-30F7-47D7-A11A-8CD62D96B07E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{81C036A9-89FD-4E2E-BF37-A553D008D9F1}.Release|x64.Build.0 = Release|x64
 		{81C036A9-89FD-4E2E-BF37-A553D008D9F1}.Release|x86.ActiveCfg = Release|Win32
 		{81C036A9-89FD-4E2E-BF37-A553D008D9F1}.Release|x86.Build.0 = Release|Win32
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Debug|x64.ActiveCfg = Debug|x64
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Debug|x64.Build.0 = Debug|x64
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Debug|x86.ActiveCfg = Debug|Win32
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Debug|x86.Build.0 = Debug|Win32
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Release|x64.ActiveCfg = Release|x64
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Release|x64.Build.0 = Release|x64
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Release|x86.ActiveCfg = Release|Win32
+		{697C245C-30F7-47D7-A11A-8CD62D96B07E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

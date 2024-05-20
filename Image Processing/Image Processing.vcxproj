@@ -131,12 +131,14 @@
     <ClCompile Include="BMP.cpp" />
     <ClCompile Include="io_operation.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="view\inputView.cpp" />
     <ClCompile Include="view\outputView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BMP.h" />
     <ClInclude Include="io_operation.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="arithmetic_operation.h" />
     <ClInclude Include="view\inputView.h" />
